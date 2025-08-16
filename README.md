@@ -47,9 +47,11 @@ Terdapat tiga halaman utama sesuai scope ujian:
 2. **Install dependencies**
    ``bash
    composer install
+   ```
 
 3. **Configure .env**
    Adjust DB_DATABASE, DB_USERNAME, and DB_PASSWORD according to your local database.
+
 4. **Run migration and seed data**
    The seeder will generate:
    1000 authors (faker)
@@ -59,7 +61,9 @@ Terdapat tiga halaman utama sesuai scope ujian:
    This process may take **15–30 minutes**, depending on your server specifications.  
    ``bash
    php artisan migrate --seed
+   ```
 
 5. **Run the application**
    ``bash
    php artisan serve
+   ```
