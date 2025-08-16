@@ -9,7 +9,7 @@ There are three main pages within the exam scope:
 
 1. **Book List with Filter**
 
-    - Displays a list of books with pagination (items per page) and search feature.
+    - Displays a list of books with pagination and search feature.
     - Data is sorted based on the highest average rating.
 
 2. **Top 10 Most Famous Authors**
