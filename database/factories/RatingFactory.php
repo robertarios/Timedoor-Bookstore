@@ -20,7 +20,6 @@ class RatingFactory extends Factory
     {
         return [
             'book_id' => Book::factory(),
-            'author_id' => Author::factory(),
             'rating' => $this->faker->numberBetween(1, 10),
         ];
     }
