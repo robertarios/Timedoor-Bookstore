@@ -66,7 +66,7 @@ There are three main pages within the exam scope:
     - 3000 categories (faker)
     - 100,000 books (faker)
     - 500,000 ratings (faker)
-      This process may take **15–30 minutes**, depending on your server specifications.
+      This process may take **15–30 minutes**, depending on your computer specifications.
 
     ```bash
     php artisan migrate --seed
