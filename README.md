@@ -47,8 +47,8 @@ There are three main pages within the exam scope:
     composer install
     ```
 
-3. **Copy .env file and configure database**
-   Copy the .env.example file to .env and adjust the following values according to your local database:
+3. **Copy .env file and configure database**  
+    Copy the .env.example file to .env and adjust the following values according to your local database.
 
     ```bash
     cp .env.example .env
@@ -60,9 +60,8 @@ There are three main pages within the exam scope:
     php artisan key:generate
     ```
 
-5. **Run migration and seed data**
+5. **Run migration and seed data**  
    The seeder will generate:
-
     - 1000 authors (faker)
     - 3000 categories (faker)
     - 100,000 books (faker)
