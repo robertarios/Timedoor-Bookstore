@@ -32,18 +32,16 @@ class RatingController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'author_id' => 'required|exists:authors,id',
             'book_id' => 'required|exists:books,id',
             'rating' => 'required|integer|between:1,10'
         ]);
 
-        if (!Book::where('id', $request->book_id)
-                ->where('author_id', $request->author_id)
-                ->exists()) {
-            return back()->with('error', 'The selected book does not belong to this author.');
-        }
+        $book = Book::findOrFail($request->book_id);
 
-        Rating::create($validated);
+        Rating::create([
+            'book_id' => $validated['book_id'],
+            'rating' => $validated['rating']
+        ]);
 
         return redirect()->route('books.index')
             ->with('success', 'Rating submitted successfully!');
