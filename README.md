@@ -46,7 +46,12 @@ There are three main pages within the exam scope:
     ```
 
 3. **Configure .env**
-   Adjust DB_DATABASE, DB_USERNAME, and DB_PASSWORD according to your local database.
+    Copy the .env.example file to .env and adjust the following values according to your local database:
+    ```bash
+    DB_DATABASE=timedoor_bookstore
+    DB_USERNAME=your_username
+    DB_PASSWORD=your_password
+    ```
 
 4. **Run migration and seed data**
    The seeder will generate:
