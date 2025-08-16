@@ -8,10 +8,12 @@ The application simulates a simple system to manage books, authors, categories, 
 There are three main pages within the exam scope:
 
 1. **Book List with Filter**
+
     - Displays a list of books with pagination (items per page) and search feature.
     - Data is sorted based on the highest average rating.
 
 2. **Top 10 Most Famous Authors**
+
     - Displays a list of the 10 authors with the most voters.
     - Only counts voters with a rating greater than 5.
 
@@ -35,7 +37,7 @@ There are three main pages within the exam scope:
 1. **Clone repository**
 
     ```bash
-    git clone https://github.com/username/timedoor-bookstore.git
+    git clone https://github.com/robertarios/timedoor-bookstore.git
     cd timedoor-bookstore
     ```
 
@@ -45,15 +47,20 @@ There are three main pages within the exam scope:
     composer install
     ```
 
-3. **Configure .env**
-    Copy the .env.example file to .env and adjust the following values according to your local database:
+3. **Copy .env file and configure database**
+   Copy the .env.example file to .env and adjust the following values according to your local database:
+
     ```bash
-    DB_DATABASE=timedoor_bookstore
-    DB_USERNAME=your_username
-    DB_PASSWORD=your_password
+    cp .env.example .env
     ```
 
-4. **Run migration and seed data**
+4. **Generate application key**
+
+    ```bash
+    php artisan key:generate
+    ```
+
+5. **Run migration and seed data**
    The seeder will generate:
 
     - 1000 authors (faker)
@@ -66,7 +73,7 @@ There are three main pages within the exam scope:
     php artisan migrate --seed
     ```
 
-5. **Run the application**
+6. **Run the application**
     ```bash
     php artisan serve
     ```
