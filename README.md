@@ -37,15 +37,13 @@ Terdapat tiga halaman utama sesuai scope ujian:
 ## Installation Steps
 
 1. **Clone repository**
-
     ```bash
-    git clone https://github.com/username/bookstore.git
-    cd bookstore
-
+    git clone https://github.com/username/timedoor-bookstore.git
+    cd timedoor-bookstore
     ```
 
 2. **Install dependencies**
-   ``bash
+   ```bash
    composer install
    ```
 
@@ -59,11 +57,11 @@ Terdapat tiga halaman utama sesuai scope ujian:
    100,000 books (faker)
    500,000 ratings (faker)
    This process may take **15–30 minutes**, depending on your server specifications.  
-   ``bash
+   ```bash
    php artisan migrate --seed
    ```
 
 5. **Run the application**
-   ``bash
+   ```bash
    php artisan serve
    ```
